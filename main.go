@@ -138,7 +138,7 @@ func listLaravelVersions() {
 			// 打印表头
 			fmt.Println("\n可用的Laravel版本:")
 			fmt.Println(strings.Repeat("-", 100))
-			fmt.Printf("| %-10s | %-80s |\n", "主���本", "具体版本")
+			fmt.Printf("| %-10s | %-80s |\n", "主版本", "具体版本")
 			fmt.Println(strings.Repeat("-", 100))
 
 			// 按主版本号排序
