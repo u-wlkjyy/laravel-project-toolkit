@@ -7,8 +7,17 @@
 - 创建指定版本的Laravel项目
 - 自动使用当前目录名作为项目名（如果未指定）
 - 支持查看所有可用的Laravel版本
+- 支持优雅终止进程（Ctrl+C）
 
 ## 安装
+
+### 方式一：下载预编译版本
+
+1. 访问 [Releases](../../releases) 页面
+2. 下载最新版本的 `laravel-project.exe`
+3. 将可执行文件放入系统 PATH 环境变量包含的目录中
+
+### 方式二：从源码编译
 
 1. 确保你的系统已安装Go语言环境
 2. 克隆本仓库
@@ -50,3 +59,30 @@ laravel-project list
 ```bash
 laravel-project help
 ```
+
+## 依赖要求
+
+- Go 1.20或更高版本（仅编译时需要）
+- Composer
+- PHP 7.4或更高版本
+
+## 注意事项
+
+- 使用此工具前请确保已安装Composer
+- 确保有足够的权限创建目录和文件
+- 确保网络连接正常，以便下载Laravel包
+
+## 发布新版本
+
+对于维护者，发布新版本的步骤：
+
+1. 创建新的版本标签：
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+2. GitHub Actions 将自动：
+   - 编译 Windows 版本的可执行文件
+   - 创建新的 Release
+   - 上传编译好的可执行文件
